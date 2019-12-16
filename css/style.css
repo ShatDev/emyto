@@ -1,0 +1,65 @@
+body {
+    background-image: url(../img/daa.jpg);
+    background-repeat : no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+}
+.noMostrar{
+    display: none;
+}
+input{
+    background-color: #fff !important;
+    border-radius: 5px !important;
+    /*padding-left: 10px !important;
+    margin-left: -5px !important;*/
+    text-align: center;
+    margin: 5px !important;
+    width: 95% !important;
+}
+.mensaje-usuario-error{
+    color:#fff;
+    background-color: red;
+    text-align: center;
+}
+.mensaje-usuario-ok{
+    color:#fff;
+    background-color: #28c777;
+    text-align: center;
+    display: none;
+}
+.modal{
+    display: block;
+    position: absolute;
+    top: 10%;
+    z-index: 999;   
+    color: #000; 
+}
+.dropdown-content li{
+    text-align: center;
+}
+#botonesContrato{
+    display: none;
+}
+#verContrato{
+    background-color: #ffffffa6;
+    color: #000;
+    border-radius: 15px;
+    border: 2px solid #28c777;
+    padding: 10px; 
+    margin: 25px 0px;
+}
+.btn{
+    width: 95%;
+    margin: 5px;
+    background-color: #001227;
+}
+#main_logo{
+    text-align: center;
+    margin-top: 20px;
+}
+#main_logo img{
+    width: 100%;
+}

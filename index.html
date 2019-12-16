@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>Emyto</title>
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body>
+      <div class="mensaje-usuario-error">Error! Por favor conectese a la red</div>
+      <div class="mensaje-usuario-ok">Conectado correctamente</div>        
+        <div class="row">
+          <div class="col offset-s4 s4" id="main_logo">
+            <a href="./home.html"><img src="./img/logo1.png"></a>
+          </div> 
+        </div>
+        <div class="contenido">
+          <div class="row">
+            <div class="col offset-m1 m10 s12">
+
+              <div>
+                <h5>Bienvenido/a!<br><span id="user_add"></span></h5>
+                <p style="color:red;" id="log"></p>
+              </div>
+              
+              <div id="nuevoContrato">
+                <div class="row">
+                  <div class="col m6 s12">
+                    <input id="comprador" type="text" placeholder="Comprador">
+                  </div>
+                  <div class="col m6 s12">
+                    <input id="vendedor" type="text" placeholder="Vendedor">
+                  </div>
+                  <div class="col m6 s12">
+                    <input id="agente" type="text" placeholder="Agente">
+                  </div>
+                  <div class="col m6 s12">
+                    <input id="comision" type="number" placeholder="Comision del Agente (0.1% - 5%)">
+                    <p>*Recorda que Emyto descontara el 0.25% del deposito en Escrow</p>
+                  </div>
+                </div>
+              </div>
+
+              <a class="waves-effect waves-light btn" class="btn wave" onclick="agregarContrato()">Nuevo Contrato</a>
+              <div id="mensajes">
+                <p id="contrato"></p>
+                <p id="log"></p>
+              </div>
+       
+              <!--<div id="ultimoContrato">
+                <h3>Ultimo Contrato</h3>
+                <p id="ucid"></p>
+                <p id="uccomprador"></p>
+                <p id="ucvendedor"></p>
+                <p id="ucagente"></p>
+                <p id="uccomision"></p>
+                <p id="ucestado"></p>
+              </div>-->
+
+              <div id="verContrato">
+                <h3>Ver Contrato</h3>
+                <input id="num_contrato" type="number" placeholder="Id del contrato">
+                <a class="waves-effect waves-light btn" onclick="cargarContrato()">Ingresar!</a>
+                <p id="vcid"></p>
+                <p id="vccomprador"></p>
+                <p id="vcvendedor"></p>
+                <p id="vcagente"></p>
+                <p id="vccomision"></p>
+                <p id="vcdeposito"></p>
+                <p id="vcestado"></p>
+              </div>
+
+            </div>
+
+          </div>           
+
+        </div>
+        
+        <div id="modal1" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4 id="titulo_modal">Bienvenido/a!</h4>
+            <p id="mensaje_modal">Cargando...</p> 
+            <div class="progress">
+              <div class="indeterminate"></div>
+            </div>              
+          </div>
+          <div class="modal-footer">
+            <!--<a class="modal-action modal-close waves-effect waves-light btn" onclick="cerrarMoldal()">ok</a>--> 
+          </div>
+        </div>
+
+        <!--<div id="modal2" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4 id="titulo_modal">-</h4>
+            <p id="mensaje_modal">-</p>
+            <input id="clave" type="text" placeholder="Clave">  
+          </div>
+          <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect waves-light btn" onclick="cargarEmyto()">Ingresar!</a>
+          </div>
+        </div>-->        
+
+       
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.2.0/dist/web3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+        <script src="https://lab.merulis.urltemporal.com/dapp/dapp1/web3.js-1.2.1/dist/web3.min.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
+        <!--  Scripts-->
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+
+    </body>
+    
+</html>
